@@ -1,7 +1,5 @@
 var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+
 
 //var {indexRouter }  = require('./routes/index');
 
@@ -15,18 +13,6 @@ const MongoClient = require('mongodb').MongoClient
 
 var app = express();
 let userReward,ss;
-
-// mailto:mongoose.connect('mongodb+srv://wonderland:wonderland@wonderlandmongo.xvfxz.mongodb.net/test?retryWrites=true&w=majority')
-//   .then(() => {
-//       console.log('Database connected');
-//       //console.log('Database connected', userReward);
-//       sendData(userReward);
-//       main();
-            
-//   })
-//   .catch((err) => {
-//       console.log(err);
-//   });
 
   async function main(){
     /**
@@ -188,11 +174,7 @@ main();
 
 
 
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+
 
 //app.use('/', indexRouter);
 
